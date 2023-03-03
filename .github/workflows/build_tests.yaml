@@ -29,6 +29,6 @@ jobs:
       - run: npm ci
 
       #- run: npx nx format:check  NOT WORKING :(
-      - run: npx nx affected --target=lint --parallel=3
-      - run: npx nx affected --target=test --parallel=3 --configuration=ci
-      - run: npx nx affected --target=build --parallel=3
+      - run: npx nx affected --target=lint --base=master --head=HEAD --parallel=3
+      - run: npx nx affected --target=test --base=master --head=HEAD --parallel=3 --configuration=ci
+      - run: npx nx affected --target=build --base=master --head=HEAD --parallel=3
